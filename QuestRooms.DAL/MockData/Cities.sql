@@ -1,0 +1,10 @@
+insert into Cities (Name) values ('Batuidu');
+insert into Cities (Name) values ('Tirapata');
+insert into Cities (Name) values ('Atlanta');
+insert into Cities (Name) values ('Drásov');
+insert into Cities (Name) values ('Mamonovo');
+insert into Cities (Name) values ('Segovia');
+insert into Cities (Name) values ('Songbo');
+insert into Cities (Name) values ('Uk');
+insert into Cities (Name) values ('Ekerö');
+insert into Cities (Name) values ('Pukekohe East');

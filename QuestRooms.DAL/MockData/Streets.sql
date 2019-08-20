@@ -1,0 +1,10 @@
+insert into Streets (Name) values ('Truax');
+insert into Streets (Name) values ('Straubel');
+insert into Streets (Name) values ('Bonner');
+insert into Streets (Name) values ('Hoffman');
+insert into Streets (Name) values ('Laurel');
+insert into Streets (Name) values ('Blue Bill Park');
+insert into Streets (Name) values ('Warbler');
+insert into Streets (Name) values ('Messerschmidt');
+insert into Streets (Name) values ('6th');
+insert into Streets (Name) values ('Clove');

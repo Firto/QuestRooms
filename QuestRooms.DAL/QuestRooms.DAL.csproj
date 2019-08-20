@@ -50,13 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\RoomsContextInitializer.cs" />
     <Compile Include="Entities\Image.cs" />
     <Compile Include="Entities\Company.cs" />
+    <Compile Include="Repository\IGenericRepository.cs" />
     <Compile Include="Entities\QuestRoom.cs" />
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\Street.cs" />
     <Compile Include="Entities\Country.cs" />
+    <Compile Include="Repository\GenericRepositoriy.cs" />
     <Compile Include="Migrations\201908191400552_start.cs" />
     <Compile Include="Migrations\201908191400552_start.Designer.cs">
       <DependentUpon>201908191400552_start.cs</DependentUpon>
@@ -73,6 +76,9 @@
     <EmbeddedResource Include="Migrations\201908191400552_start.resx">
       <DependentUpon>201908191400552_start.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MockData\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

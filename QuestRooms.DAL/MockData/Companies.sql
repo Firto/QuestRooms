@@ -1,0 +1,10 @@
+insert into Companies (Name) values ('Western Asset High Income Opportunity Fund, Inc.');
+insert into Companies (Name) values ('Nielsen N.V.');
+insert into Companies (Name) values ('iShares 0-5 Year Investment Grade Corporate Bond ETF');
+insert into Companies (Name) values ('First Trust Emerging Markets AlphaDEX Fund');
+insert into Companies (Name) values ('Customers Bancorp, Inc');
+insert into Companies (Name) values ('Cohen & Steers Closed-End Opportunity Fund, Inc.');
+insert into Companies (Name) values ('Paragon Commercial Corporation');
+insert into Companies (Name) values ('Special Opportunities Fund Inc.');
+insert into Companies (Name) values ('Zosano Pharma Corporation');
+insert into Companies (Name) values ('PowerShares Optimum Yield Diversified Commodity Strategy No K-');
