@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,7 +44,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DtoModels\CompanyDto.cs" />
+    <Compile Include="DtoModels\AddressDto.cs" />
+    <Compile Include="DtoModels\CityDto.cs" />
+    <Compile Include="DtoModels\ImageDto.cs" />
+    <Compile Include="DtoModels\QuestRoomDto.cs" />
+    <Compile Include="DtoModels\StreetDto.cs" />
+    <Compile Include="DtoModels\CountryDto.cs" />
+    <Compile Include="Mapping\MapperProflile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servises\Abstraction\IQuestRoomService.cs" />
+    <Compile Include="Servises\Abstraction\ICityService.cs" />
+    <Compile Include="Servises\Implementation\QuestRoomServise.cs" />
+    <Compile Include="Servises\Implementation\CityServise.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuestRooms.DAL\QuestRooms.DAL.csproj">
+      <Project>{41E6E42F-13ED-4C0A-949B-3926FC1FA65E}</Project>
+      <Name>QuestRooms.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

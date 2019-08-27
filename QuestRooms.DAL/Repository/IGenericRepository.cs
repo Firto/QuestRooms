@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace QuestRooms.DAL.Entities
+namespace QuestRooms.DAL.Repositoriy
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {

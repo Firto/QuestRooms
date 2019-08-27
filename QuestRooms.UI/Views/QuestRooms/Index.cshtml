@@ -1,0 +1,28 @@
+﻿@model List<QuestRooms.BLL.DtoModels.QuestRoomDto>
+
+
+@{
+    ViewBag.Title = "All";
+}
+
+<header>
+    <h1 class="text-center font-weight-bold" >Quest rooms</h1>
+</header>
+<section class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card m-1">
+                <img src="http://krd.mir-kvestov.ru/uploads/quests/6878/large/questroom_proklyatie_sary_photo1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+
+                    <p class="card-text">Rating</p>
+                    <a href="#" class="btn btn-primary">More</a>
+                </div>
+            </div>
+        </div>
+    }
+</section>
+

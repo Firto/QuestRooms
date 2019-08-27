@@ -59,12 +59,7 @@
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\Street.cs" />
     <Compile Include="Entities\Country.cs" />
-    <Compile Include="Repository\GenericRepositoriy.cs" />
-    <Compile Include="Migrations\201908191400552_start.cs" />
-    <Compile Include="Migrations\201908191400552_start.Designer.cs">
-      <DependentUpon>201908191400552_start.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repository\EFGenericRepositoriy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomsContext.cs" />
   </ItemGroup>
@@ -72,13 +67,26 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908191400552_start.resx">
-      <DependentUpon>201908191400552_start.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MockData\" />
+    <Content Include="MockData\Addreses.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockData\Cities.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockData\Companies.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockData\Countries.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockData\QuestRooms.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockData\Streets.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

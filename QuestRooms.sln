@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestRooms.BLL", "QuestRoom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestRooms.UI", "QuestRooms.UI\QuestRooms.UI.csproj", "{07CD2AA2-BDCD-4223-8D1D-9FC95EF17D4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestRooms.TestConsole", "QuestRooms.TestConsole\QuestRooms.TestConsole.csproj", "{B482882E-4B18-45E7-8FD5-B7DF4AC8F4E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{07CD2AA2-BDCD-4223-8D1D-9FC95EF17D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07CD2AA2-BDCD-4223-8D1D-9FC95EF17D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07CD2AA2-BDCD-4223-8D1D-9FC95EF17D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B482882E-4B18-45E7-8FD5-B7DF4AC8F4E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B482882E-4B18-45E7-8FD5-B7DF4AC8F4E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B482882E-4B18-45E7-8FD5-B7DF4AC8F4E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B482882E-4B18-45E7-8FD5-B7DF4AC8F4E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

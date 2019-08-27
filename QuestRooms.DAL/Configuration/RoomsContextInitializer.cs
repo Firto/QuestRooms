@@ -13,20 +13,17 @@ namespace QuestRooms.DAL.Configuration
     {
         private List<string> paths = new List<string>
         {
-            "/MockData/DBInit.sql",
-            "/MockData/DBInit.sql"
+            @"\bin\MockData\Countries.sql",
+            @"\bin\MockData\Cities.sql",
+            @"\bin\MockData\Streets.sql",
+            @"\bin\MockData\Companies.sql",
+            @"\bin\MockData\Addreses.sql",
+            @"\bin\MockData\QuestRooms.sql"
         };
 
         protected override void Seed(RoomsContext db)
         {
-            //using (FileStream file = new FileStream("Configuration/DBInit.sql", FileMode.Open, FileAccess.Read)) {
-            //    byte[] bytes = new byte[file.Length+1];
-            //    file.Read(bytes, 0, (int)file.Length);
-            //    db.Database.ExecuteSqlCommand(BitConverter.ToString(bytes));
-            //    db.SaveChanges();
-            //}
-
-            var buildDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var buildDir = System.AppDomain.CurrentDomain.BaseDirectory;
 
             foreach (var path in paths)
             {
@@ -38,9 +35,7 @@ namespace QuestRooms.DAL.Configuration
         private string ReadFromFile(string path)
         {
             using (StreamReader sr = new StreamReader(path))
-            {
                 return sr.ReadToEnd();
-            }
         }
     }
 }

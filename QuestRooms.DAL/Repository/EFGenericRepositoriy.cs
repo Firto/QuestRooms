@@ -4,7 +4,7 @@ using System.Linq;
 using System.Data.Entity;
 using System.Linq.Expressions;
 
-namespace QuestRooms.DAL.Entities
+namespace QuestRooms.DAL.Repositoriy
 {
     public class EFGenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
