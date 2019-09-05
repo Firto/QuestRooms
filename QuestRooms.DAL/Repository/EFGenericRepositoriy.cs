@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
 using System.Linq.Expressions;
+using QuestRooms.DAL.Entities;
 
 namespace QuestRooms.DAL.Repositoriy
 {
-    public class EFGenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
+    public class EFGenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         private readonly DbContext _context;
         DbSet<TEntity> _dbSet;
@@ -45,6 +46,10 @@ namespace QuestRooms.DAL.Repositoriy
         {
             _dbSet.Remove(item);
             _context.SaveChanges();
+        }
+
+        public TEntity Last() {
+            return _dbSet.OrderByDescending(x => x.ID).First();
         }
     }
 }

@@ -1,0 +1,46 @@
+﻿@model QuestRooms.UI.Models.UserRegisterModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header>
+    <h1 class="text-center font-weight-bold">Register</h1>
+</header>
+<section class="row">
+
+    @using (Ajax.BeginForm("Register", "Account", new AjaxOptions { OnSuccess = "CompleateRegisterResult" }))
+    {
+        <h4 class="text-center font-weight-bold text-danger" id="error"></h4>
+        <label>
+            <p class="label-txt">ENTER YOUR EMAIL</p>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "input" } })
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+        <br>
+        <label>
+            <p class="label-txt">ENTER YOUR PASSWORD</p>
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input", @type = "password" } })
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+        <br>
+        <label>
+            <p class="label-txt">REPEAT YOUR PASSWORD</p>
+            @Html.EditorFor(model => model.RepeatPassword, new { htmlAttributes = new { @class = "input", @type = "password" } })
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+        <br>
+        <button type="submit" class="btn btn-success">Register</button>
+        @Html.ActionLink("Back", "Index", "QuestRooms", null, new { @class = "btn btn-primary" });
+    }
+
+
+</section>
+

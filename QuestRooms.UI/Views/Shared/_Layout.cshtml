@@ -8,16 +8,18 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-  
+
 
     <div class="container">
         @RenderBody()
         <footer>
-            <p class="font-weight-bold" >&copy; @DateTime.Now.Year - STIOPKO LTD</p>
+            <p class="font-weight-bold">&copy; @DateTime.Now.Year - STIOPKO LTD</p>
         </footer>
     </div>
 
     <script src="~/Scripts/jquery-3.0.0.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/register.js"></script>
 </body>
 </html>

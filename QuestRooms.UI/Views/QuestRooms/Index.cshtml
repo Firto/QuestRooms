@@ -1,28 +1,26 @@
-﻿@model List<QuestRooms.BLL.DtoModels.QuestRoomDto>
-
-
+﻿@model object
+@using Microsoft.AspNet.Identity
 @{
+
     ViewBag.Title = "All";
 }
 
 <header>
-    <h1 class="text-center font-weight-bold" >Quest rooms</h1>
+    <h1 class="text-center font-weight-bold">Quest rooms</h1>
+   
 </header>
 <section class="row">
-
-    @foreach (var item in Model)
+    @if (!User.Identity.IsAuthenticated)
     {
-        <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card m-1">
-                <img src="http://krd.mir-kvestov.ru/uploads/quests/6878/large/questroom_proklyatie_sary_photo1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">@item.Name</h5>
-
-                    <p class="card-text">Rating</p>
-                    <a href="#" class="btn btn-primary">More</a>
-                </div>
-            </div>
-        </div>
+        @Html.ActionLink("LogIn", "LogIn", "Account", null, new { @class = "col-1 offset-9 btn btn-success" })
+        @Html.ActionLink("Register", "Register", "Account", null, new { @class = "col-1 offset-1 btn btn-primary" })
+    }
+    else
+    {
+        @Html.ActionLink("Exit", "LogOut", "Account", null, new { @class = "col-2 offset-10 btn btn-primary" })
+    }
+    @{
+        Html.RenderPartial("GetQuestRooms", Model);
     }
 </section>
 

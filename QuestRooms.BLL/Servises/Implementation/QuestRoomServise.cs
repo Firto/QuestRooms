@@ -24,5 +24,12 @@ namespace QuestRooms.BLL.Servises.Implementation
         {
             return mapper.Map<IEnumerable<QuestRoom>, ICollection<QuestRoomDto>>(repos.Get());
         }
+        public ICollection<QuestRoomDto> GetRoomsFromID(int ID, int count) {
+            return mapper.Map<IEnumerable<QuestRoom>, ICollection<QuestRoomDto>>(repos.Get((x) => x.ID > ID).Take(count));
+        }
+
+        public QuestRoomDto GetLast() {
+            return mapper.Map<QuestRoom, QuestRoomDto>(repos.Last());
+        }
     }
 }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace QuestRooms.DAL.Entities
 {
-    public class City
+    public class City : BaseEntity
     {
-        public int ID { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<Address> Addresses { get; set; }

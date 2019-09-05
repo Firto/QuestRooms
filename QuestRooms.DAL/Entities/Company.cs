@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace QuestRooms.DAL.Entities
 {
-    public class Company
+    public class Company : BaseEntity
     {
-        public int ID { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<QuestRoom> QuestRooms { get; set; }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace QuestRooms.DAL.Entities
 {
-    public class QuestRoom
+    public class QuestRoom : BaseEntity
     {
-        public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public TimeSpan TimeTravel { get; set; }
